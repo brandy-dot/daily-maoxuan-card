@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="每日毛选卡片：每天读一张，留一个问题。" />
+    <title>每日毛选卡片</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="page-header">
+        <p class="eyebrow">DAILY READING CARD</p>
+        <h1>每日毛选卡片</h1>
+        <p class="subtitle">每天读一张，留一个问题。</p>
+      </header>
+
+      <section class="card-stage" aria-live="polite">
+        <button
+          class="reading-card"
+          id="readingCard"
+          type="button"
+          aria-label="翻转卡片"
+          aria-pressed="false"
+        >
+          <span class="card-inner">
+            <span class="card-face card-front">
+              <span class="card-meta">
+                <span id="cardDate"></span>
+                <span>点击翻面</span>
+              </span>
+              <span class="accent-mark" aria-hidden="true"></span>
+              <span class="card-title" id="cardTitle">正在取卡……</span>
+              <span class="quote" id="cardQuote"></span>
+              <span class="source" id="cardSource"></span>
+              <span class="tags" id="cardTags"></span>
+            </span>
+
+            <span class="card-face card-back">
+              <span class="card-meta">
+                <span>今日思考</span>
+                <span>点击返回</span>
+              </span>
+              <span class="reflection-block">
+                <span class="reflection-label">今日启发</span>
+                <span class="reflection-text" id="cardInsight"></span>
+              </span>
+              <span class="divider" aria-hidden="true"></span>
+              <span class="reflection-block">
+                <span class="reflection-label">今日问题</span>
+                <span class="question-text" id="cardQuestion"></span>
+              </span>
+            </span>
+          </span>
+        </button>
+
+        <p class="status" id="status" role="status"></p>
+      </section>
+
+      <div class="actions">
+        <button class="action-button primary" id="randomButton" type="button">
+          随机再抽一张
+        </button>
+        <button class="action-button secondary" id="copyButton" type="button">
+          复制分享文案
+        </button>
+      </div>
+
+      <footer>
+        <span>一天一页 · 慢慢读</span>
+        <span id="cardCount"></span>
+      </footer>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
